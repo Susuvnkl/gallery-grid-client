@@ -1,0 +1,22 @@
+.Modal {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.5);
+  z-index: 100000;
+
+  .ModalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+
+    .ModalContainer {
+      position: relative;
+      background: #494949;
+      padding: 32px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// src/App.scss
+.app {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  }
+
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    .imageItem {
+      position: relative;
+      width: 100%; // Ensure the container is fully responsive
+      padding-top: 100%; // This creates a square aspect ratio
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // This ensures the image covers the area without distorting
+        border-radius: 8px;
+      }
+    }
+  }
+}

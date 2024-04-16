@@ -1,0 +1,36 @@
+.ImagesGallery {
+  width: 100%; // Ensures the gallery takes up the full width
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 equal columns
+  gap: 10px; // Space between grid items
+  width: 100%;
+  max-width: 100%; // Allows the grid to expand fully
+}
+
+.imageWrapper {
+  position: relative; // Needed to position the pseudo-element absolutely
+  width: 100%;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; // Creates a square aspect ratio
+    background: #eee; // Optional: background color for the squares
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensures the image covers the square area
+  }
+}
